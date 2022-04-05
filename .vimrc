@@ -18,7 +18,7 @@ set hidden
 set colorcolumn=80
 set scrolloff=12
 set signcolumn=yes
-
+set clipboard=unnamedplus
 
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 
@@ -39,7 +39,7 @@ Plug 'kien/ctrlp.vim'
 "Plug 'Valloric/YouCompleteMe', {'commit':'d98f896' }
 Plug 'mbbill/undotree'
 Plug 'sainnhe/gruvbox-material'
-
+Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 call plug#end()
 
 colorscheme gruvbox-material
@@ -223,7 +223,8 @@ nnoremap <silent> <Leader>- : vertical resize -5<CR>
 nmap <C-n> :NERDTreeToggle<CR>
 let g:NERDTreeGitStatusWithFlags = 1
 let g:NERDTreeIgnore = ['^node_modules$']
-autocmd VimEnter * NERDTree 
+"autocmd VimEnter * NERDTree 
+
 
 "fun! TrimWhitespace()
 "    let l:save = winsaveview()
