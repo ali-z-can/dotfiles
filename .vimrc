@@ -31,15 +31,15 @@ Plug 'preservim/nerdtree'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'ryanoasis/vim-devicons'
 Plug 'airblade/vim-gitgutter'
-Plug 'jremmen/vim-ripgrep'
-Plug 'tpope/vim-fugitive'
 Plug 'vim-utils/vim-man'
-Plug 'lyuts/vim-rtags'
+Plug 'tpope/vim-fugitive'
 Plug 'kien/ctrlp.vim'
-"Plug 'Valloric/YouCompleteMe', {'commit':'d98f896' }
 Plug 'mbbill/undotree'
 Plug 'sainnhe/gruvbox-material'
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 call plug#end()
 
 colorscheme gruvbox-material
@@ -225,6 +225,10 @@ let g:NERDTreeGitStatusWithFlags = 1
 let g:NERDTreeIgnore = ['^node_modules$']
 "autocmd VimEnter * NERDTree 
 
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 "fun! TrimWhitespace()
 "    let l:save = winsaveview()
